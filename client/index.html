@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="generator" />
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        input,
+        button {
+            font-size: 30px;
+        }
+        
+        .container {
+            left: 0;
+            margin-top: -100px;
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            width: 100%;
+        }
+        
+        div.fixed {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 200px;
+        }
+    </style>
+    <title>gojhfghjgj</title>
+
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <!-- Welcome-->
+            <div id="welcome">
+                <h1>Reaction Test</h1>
+                <br>
+                <h3>By Gautam sudarshan</h3>
+                <br><button id="start">Start!</button>
+            </div>
+
+            <!-- EnterBday-->
+            <div id="enterbday" style="display:none;">
+                <h1>Enter your age</h1>
+                <input id="age" type="number" min="5" max="100">
+                <br><button id="datedone">Next</button>
+            </div>
+
+            <!-- How2play-->
+            <div id="how2play" style="display:none;">
+                <h1>How to play</h1>
+                <li>Dont click when the page is red</li>
+                <li>When the page turns green, quickly click or tap the page</li>
+                <li>Your reaction time will be measured based on how many ms it takes you to click when the page turns green</li>
+                <br><button id="game">Start!</button>
+            </div>
+
+            <!-- game-->
+            <div id="game-1" style="display:none;">
+                <h1>Dont tap yet....</h1>
+            </div>
+            <div id="game-2" style="display:none;">
+                <h1>TAP NOW!</h1>
+            </div>
+
+            <!-- result-->
+            <div id="result" style="display:none;">
+                <h1 id="round">Round NaN of 3</h1>
+                <p id="ms">Your reaction time was NaN ms</p>
+                <button id="next">Next round</button>
+            </div>
+
+            <!-- end-->
+            <div id="end" style="display:none;">
+                <h1>Thanks for playing!</h1>
+                <p id="ms-end">Your average reaction time is NaN</p>
+            </div>
+        </div>
+    </center>
+
+    <script src='./app.js'></script>
+</body>
+
+</html>
