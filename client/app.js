@@ -1,5 +1,6 @@
-state = 0
-round = 1
+var state = 0
+var round = 0
+var score = []
 
 function showhide(show, hide) {
     document.getElementById(show).style.display = ""
@@ -26,9 +27,32 @@ document.getElementById("game").onclick = () => {
 }
 
 function game() {
+    state = 1
+    round += 1
     document.body.style.backgroundColor = "red"
+
     showhide("game-1", "how2play")
     bruh = setTimeout(() => {
-
+        state = 2
+        start = Date.now()
+        document.body.style.backgroundColor = "green"
+        showhide("game-2", "game-1")
     }, getRandomInt(3000, 7000))
+
+}
+
+window.onclick = () => {
+    if (state == 1) {
+        alert("Only click when the page turns green!")
+        if (typeof bruh != "undefined") clearTimeout(bruh)
+        game()
+    }
+    if (state != 2) return
+    state = 3
+    document.body.style.backgroundColor = "cyan"
+    var ms = Date.now() - start
+    showhide("result", "game-2")
+    score.push(ms)
+    document.getElementById("ms").innerHTML = `Your reaction time was ${ms} ms`
+    document.getElementById("round").innerHTML = `Round ${round} of 3`
 }
