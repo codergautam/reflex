@@ -77,6 +77,11 @@ window.onclick = () => {
 
         //send results to server
 
+        fetch("/submit", {
+            method: "post",
+            body: JSON.stringify({ age: age, score: score }),
+            headers: { "Content-Type": "application/json" }
+        })
     }
 
 }
